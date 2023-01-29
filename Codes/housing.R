@@ -68,10 +68,18 @@ hh_number_map <- ggplot(census) +
   theme_map() +
   theme(legend.background = element_blank())
 hh_number_map
+ggsave("images/hh_number_map.jpg", height = 4.25, width = 6.5, units = "in")
+
+hh_number_hist <- ggplot(census, 
+                         aes(x = total_hhsE)) +
+  geom_histogram() +
+  scale_x_continuous(name = "Number of Total Households")
+hh_number_hist
+ggsave("images/hh_number_hist.jpg", height = 4.25, width = 6.5, units = "in")
 
 ## In total, there are 603,305 households. 
 
-### testing to upload to github again
+### testing to upload to github again and again
 
 
 
