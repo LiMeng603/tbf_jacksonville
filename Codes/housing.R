@@ -12,6 +12,9 @@ library(cartogram)
 library(ggthemes)
 library(lwgeom)
 library(treemapify)
+library(leaflet)
+library(htmlwidgets)
+library(here)
 
 # Downloading Census Data
 ## view(load_variables(2021, "acs5"))
@@ -232,6 +235,18 @@ pop_den_map <- ggplot(census) +
 pop_den_map
 ggsave("images/pop_den_map.jpg", height = 4.25, width = 6.5, units = "in") 
 
+# Create a Leaflet map
+map <- census %>%
+  st_transform("WGS84") %>%
+  leaflet() %>%
+  addTiles() %>%
+  addPolygons(popup = ~GEOID,
+              weight = 1,
+              opacity = 1,
+              highlightOptions =
+                highlightOptions(fillColor = "red"))
+
+saveWidget(map, file = here('boundaries.html'))
 
 
 
