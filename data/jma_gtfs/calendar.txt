@@ -1,0 +1,5 @@
+service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+2301JANPL-2301SAPL-Saturday-02,0,0,0,0,0,1,0,20230128,20230902
+2301JANPL-2301SUPL-Sunday-03,0,0,0,0,0,0,1,20230129,20230903
+2301JANPL-2301WKPL-Weekday-01,1,1,1,1,1,0,0,20230123,20230831
+2301JANPL-2301WKPL-Weekday-02,1,1,1,1,1,0,0,20230127,20230901
