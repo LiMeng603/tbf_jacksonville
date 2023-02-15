@@ -78,6 +78,8 @@ full_skim <- full_join(fare_long, IVTT_long) %>%
   full_join(total_time_long) %>%
   full_join(transfers_long)
 
+write_csv(full_skim, "data/public_transit_full_skim.csv")
+
 head(full_skim) %>%
   kable()
 
