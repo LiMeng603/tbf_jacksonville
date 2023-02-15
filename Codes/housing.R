@@ -64,6 +64,8 @@ census$area <- st_area(census)
 census$pop_den = census$total_popE/census$area
 census$pop_den1 = as.vector(census$pop_den)*10^6
 
+write_csv(census, "data/jta-census.csv")
+
 # Household number
 sum(census$total_hhsE)
 mean(census$total_hhsE)
